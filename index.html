@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will you be my Valentine? 💗</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="top">
+      <h1 class="title">will you be my valentine?</h1>
+      <div class="bigHeart">💗</div>
+    </header>
+
+    <!-- SCENE 1: NERVOUS BEGINNING -->
+    <section class="screen active" id="s1">
+      <div class="card">
+        <img class="gifHero" src="./assets/nervous.gif" alt="nervous gif"/>
+
+        <div class="story">
+          <p>Hey… 😅</p>
+          <p>I’ve been practicing this in my head for days.</p>
+          <p>My heart dey beat like generator wey no get fuel 😭</p>
+          <p>But I can’t keep quiet anymore.</p>
+          <p class="askLine">So let me ask you properly…</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn yes" id="toQuestion">Continue ➜</button>
+        </div>
+
+        <p class="hint">Story mode: ON ✨</p>
+      </div>
+    </section>
+
+    <!-- SCENE 2: OVERTHINKING -->
+    <section class="screen" id="s2">
+      <div class="card">
+        <img class="gifHero" src="./assets/thinking.gif" alt="thinking gif"/>
+
+        <div class="story">
+          <p>Wait…</p>
+          <p>Did I ask too fast?</p>
+          <p>Should I have brought flowers first?</p>
+          <p>Chai… my brain don overwork 😭</p>
+          <p>But even with all this fear… I still know what I want.</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s1">← Back</button>
+          <button class="btn yes" id="toAsk">Ask her ➜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3: THE QUESTION (YES/NO) -->
+    <section class="screen" id="s3">
+      <div class="card">
+        <div class="kicker">🎬 EP1: THE QUESTION</div>
+        <div class="story center">
+          <p class="bigQ">Will you be my Valentine? 💗</p>
+          <p class="soft">Choose wisely o… I dey beg 😭</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn yes" id="btnYes">YES 💘</button>
+          <button class="btn no" id="btnNo">NO 🙃</button>
+        </div>
+
+        <p class="hint">Try “NO” if you want… but just know say e get consequence 👀</p>
+      </div>
+    </section>
+
+    <!-- SCENE 4: NO CONSEQUENCE (WITH DELAY) -->
+    <section class="screen" id="s4">
+      <div class="card">
+        <img class="gifHero" src="./assets/crying.gif" alt="crying gif"/>
+
+        <div class="story">
+          <p><b>So you picked NO… 😭</b></p>
+          <p>This is me now.</p>
+          <p>I practiced for days. I gathered courage. I even rehearsed in front of mirror.</p>
+          <p>And now see me like this 💔</p>
+          <p><b>Chai… my village people are really winning.</b></p>
+          <p>But it’s okay. Mistakes happen 😌</p>
+          <p>Go back… and choose properly.</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn yes" id="backToQuestion">Go back and choose YES</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5: LET ME EXPLAIN -->
+    <section class="screen" id="s5">
+      <div class="card">
+        <img class="gifHero" src="./assets/calm.gif" alt="calm gif"/>
+
+        <div class="story">
+          <p>Okay… let me explain small.</p>
+          <p>I like the way you make things feel easy.</p>
+          <p>Even when life is noisy, you feel like calm.</p>
+          <p>You’re not just someone I admire…</p>
+          <p><b>Na you I choose. No competition.</b></p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s3">← Back</button>
+          <button class="btn yes" id="toFlowers">Continue ➜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 6: FLOWERS -->
+    <section class="screen" id="s6">
+      <div class="card">
+        <div class="kicker">🌸 FLOWERS FOR YOU</div>
+
+        <div class="bouquetStage">
+          <img class="bouquetImg" src="./assets/bouquet.gif" alt="bouquet"/>
+        </div>
+
+        <div class="story">
+          <p>So I brought you flowers 🌸</p>
+          <p>Not because it’s Valentine’s Day… but because you deserve softness.</p>
+          <p>Each flower carry one meaning: care, effort, patience… choosing you again and again.</p>
+          <p>Even if these ones no smell… the feeling behind them loud.</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s5">← Back</button>
+          <button class="btn yes" id="toAskAgain">Ask again ➜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 7: ASK AGAIN -->
+    <section class="screen" id="s7">
+      <div class="card">
+        <div class="kicker">🎬 EP2: ONE MORE TIME</div>
+
+        <div class="story center">
+          <p>So let me ask again.</p>
+          <p>Calm this time. With flowers. With honesty.</p>
+          <p>With my whole chest 😌</p>
+          <p class="bigQ">Will you be my Valentine? 💘</p>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s6">← Back</button>
+          <button class="btn yes" id="finalYes">YES 💗</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 8: YES CELEBRATION + GIFTS -->
+    <section class="screen" id="s8">
+      <div class="card redCard">
+        <img class="gifHero" src="./assets/celebrate.gif" alt="celebration gif"/>
+
+        <div class="story center white">
+          <p class="bigQ">WAIT—</p>
+          <p>Did you just say YES?! 😭💗</p>
+          <p>Omoooo! This happiness no be small thing.</p>
+          <p>World, pause first.</p>
+        </div>
+
+        <div class="giftGrid">
+          <button class="gift" id="openLetter">
+            <div class="giftIcon">💌</div>
+            <div class="giftText">Letter</div>
+          </button>
+
+          <button class="gift" id="openSong">
+            <div class="giftIcon">🎵</div>
+            <div class="giftText">Song</div>
+          </button>
+
+          <button class="gift" id="openFlowers">
+            <div class="giftIcon">🌸</div>
+            <div class="giftText">Flowers</div>
+          </button>
+        </div>
+
+        <button class="linkBtn" id="restart">restart ↺</button>
+      </div>
+    </section>
+
+    <!-- SCENE 9: LETTER -->
+    <section class="screen" id="s9">
+      <div class="card pinkCard">
+        <div class="kicker">💌 LETTER</div>
+
+        <div class="paper">
+          <div class="tape" aria-hidden="true"></div>
+          <div class="paperInner">
+            <p class="paperHello">My love,</p>
+            <div class="paperBody" id="letterBox"></div>
+            <p class="paperSign">— <span id="fromName"></span></p>
+          </div>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s8">← Back</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 10: SONG -->
+    <section class="screen" id="s10">
+      <div class="card redCard">
+        <div class="kicker white">🎵 OUR SONG</div>
+
+        <div class="story center whiteSoft">
+          <p>Tap to open the song 👇</p>
+          <p class="small">Rutshelle Guillaume feat. Kaï — Tolere w (Official Music Video)</p>
+        </div>
+
+        <a class="bigLink" id="songLink" target="_blank" rel="noopener">▶ Play on YouTube</a>
+
+        <div class="btnRow">
+          <button class="btn ghost" data-back="s8">← Back</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
